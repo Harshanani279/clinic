@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vibha General Medicine Clinic - Book Your Appointment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f4f7f8;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1588776814546-ec8a0f11f2b3') center/cover;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    .doctor {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .doctor .initials {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: #2e86de;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      font-weight: bold;
+      margin-right: 20px;
+    }
+    .doctor h2 {
+      margin: 0 0 10px 0;
+    }
+    .contact-info {
+      font-style: italic;
+      margin-top: 5px;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #2e86de;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+    .map {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .map iframe {
+      border: none;
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #dcdcdc;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><span style="color:#2e86de;">Vibha General Medicine Clinic</span></h1>
+    <p>Neurology & Eye Care by Experts</p>
+  </header>
+
+  <div class="container">
+    <div class="doctor">
+      <div class="initials">BKR</div>
+      <div>
+        <h2 style="color:#2e86de;">Dr. BHARATH KUMAR REDDY</h2>
+        <p>MBBS, DNB General Medicine, DM Neurology</p>
+        <p>Consultant Neurologist</p>
+        <p class="contact-info">Email: 123@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="doctor">
+      <div class="initials">VK</div>
+      <div>
+        <h2 style="color:#2e86de;">Dr. VIRAJA KOLA</h2>
+        <p>MBBS, DOMS, DNB (Ophthalmology)</p>
+        <p>Cataract & Refractive Surgeon, Fellowship in Medical Retina</p>
+        <p class="contact-info">Email: 456@gmail.com</p>
+      </div>
+    </div>
+
+    <form onsubmit="bookAppointment(event)">
+      <h2 style="color:#2e86de;">Book an Appointment</h2>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+
+      <label for="doctor">Select Doctor</label>
+      <select id="doctor" required>
+        <option value="Dr. Bharath Kumar Reddy">Dr. Bharath Kumar Reddy (Neurology)</option>
+        <option value="Dr. Viraja Kola">Dr. Viraja Kola (Ophthalmology)</option>
+      </select>
+
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" required>
+
+      <label for="message">Brief Message / Symptoms</label>
+      <textarea id="message" rows="4"></textarea>
+
+      <button type="submit">Submit Appointment Request</button>
+    </form>
+
+    <div class="map">
+      <h2 style="color:#2e86de;">Find Us Here</h2>
+      <iframe src="https://g.co/kgs/wcGkweV"></iframe>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 <span style="color:#2e86de;">Vibha General Medicine Clinic</span>. All rights reserved.
+  </footer>
+
+  <script>
+    function bookAppointment(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const doctor = document.getElementById('doctor').value;
+      alert(`Thank you ${name}! Your appointment request with ${doctor} has been submitted.`);
+    }
+  </script>
+
+</body>
+</html>
